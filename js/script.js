@@ -164,9 +164,14 @@ particlesJS('particles-js', {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "repulse" // Particle reaction when hovering
+                "mode": "repulse" // Particles move away from mouse cursor
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push" // New particles are pushed when clicked (optional)
             }
         }
     },
     "retina_detect": true
 });
+
