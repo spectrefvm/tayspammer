@@ -1,28 +1,51 @@
+// Password protection logic
+const correctPassword = 'yourpassword'; // Replace with your actual password
+
+// Get elements for password protection
+const submitPasswordButton = document.getElementById('submitPassword');
+const passwordInput = document.getElementById('password');
+const passwordPrompt = document.getElementById('passwordPrompt');
+const contentSection = document.getElementById('content'); // Changed this name to avoid confusion
+const errorMessage = document.getElementById('errorMessage');
+
+// Event listener for password submission
+submitPasswordButton.addEventListener('click', () => {
+    const enteredPassword = passwordInput.value;
+
+    // Check if the entered password is correct
+    if (enteredPassword === correctPassword) {
+        passwordPrompt.style.display = 'none'; // Hide password prompt
+        contentSection.style.display = 'block'; // Show the main content
+    } else {
+        errorMessage.style.display = 'block'; // Show error message
+    }
+});
+
+// Variables for spammer functionality
 const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 const url = document.getElementById("url");
 const username = document.getElementById("username");
-const content = document.getElementById("message");
+const messageInput = document.getElementById("message"); // Renamed variable to avoid conflicts
 const avatar_url = document.getElementById("avatar");
 const deleteBtn = document.getElementById("delete");
 const delUrl = document.getElementById("delUrl");
 let interval;
 
-
 start.addEventListener("click", async () => {
-    if (!url.value || !content.value) {
+    if (!url.value || !messageInput.value) {
         alert("Please fill out all required info!");
         return false;
     }
     try {
         const res = await fetch(url.value);
         if (!res.ok) {
-            throw new Error(`Error: ${response.status} ${response.statusText}`);
+            throw new Error(`Error: ${res.status} ${res.statusText}`); // Fixed the incorrect usage of `response`
         }
         start.disabled = true;
         stop.disabled = false;
         alert("Started spamming!");
-        interval = setInterval(send, 50);
+        interval = setInterval(send, 50); // Sends request every 50ms
     } catch (e) {
         alert("Invalid webhook URL!");
     }
@@ -39,7 +62,7 @@ async function send() {
     const payload = {
         username: username.value,
         avatar_url: avatar_url.value,
-        content: content.value,
+        content: messageInput.value, // Changed to messageInput to avoid conflict
     };
 
     try {
@@ -51,29 +74,26 @@ async function send() {
             body: JSON.stringify(payload),
         });
     } catch (e) {
-        console.log(e);
+        console.log(e); // Log errors
     }
 }
 
-
-
 deleteBtn.addEventListener("click", async () => {
     if (!delUrl.value) {
-      alert("Please fill out all required info!");
-      return false;
+        alert("Please fill out all required info!");
+        return false;
     }
     try {
-      const res = await fetch(delUrl.value);
-      if (!res.ok) {
-        throw new Error(`Error: ${response.status} ${response.statusText}`);
-      }
-      del();
-      alert("Success, webhook deleted successfully!");
+        const res = await fetch(delUrl.value);
+        if (!res.ok) {
+            throw new Error(`Error: ${res.status} ${res.statusText}`);
+        }
+        del(); // Call delete function if the URL is correct
+        alert("Success, webhook deleted successfully!");
     } catch (e) {
-      alert("Invalid webhook URL!");
+        alert("Invalid webhook URL!");
     }
 });
-
 
 async function del() {
     try {
@@ -87,53 +107,6 @@ async function del() {
         console.log(e);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// Password protection logic
-const correctPassword = 'yourpassword'; // Replace with your actual password
-
-// Get elements
-const submitPasswordButton = document.getElementById('submitPassword');
-const passwordInput = document.getElementById('password');
-const passwordPrompt = document.getElementById('passwordPrompt');
-const content = document.getElementById('content');
-const errorMessage = document.getElementById('errorMessage');
-
-// Event listener for password submission
-submitPasswordButton.addEventListener('click', () => {
-    const enteredPassword = passwordInput.value;
-
-    // Check if the entered password is correct
-    if (enteredPassword === correctPassword) {
-        passwordPrompt.style.display = 'none'; // Hide password prompt
-        content.style.display = 'block'; // Show the main content
-    } else {
-        errorMessage.style.display = 'block'; // Show error message
-    }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // particles.js configuration
 particlesJS('particles-js', {
