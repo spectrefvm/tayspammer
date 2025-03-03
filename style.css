@@ -40,7 +40,7 @@ header {
     width: 120px;
     height: 120px;
     padding: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 20px rgba(120, 0, 210, 0.5); /* Glow Effect */
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
@@ -90,7 +90,7 @@ header {
 }
 
 .inputs input:focus {
-    border-color: #007bff;
+    border-color: #7800d2; /* Updated to purple */
     outline: none;
 }
 
@@ -106,12 +106,18 @@ header {
     border-radius: 8px;
     cursor: pointer;
     border: none;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Added transition for glow effect */
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #7800d2; /* Updated to purple */
     color: white;
+    box-shadow: 0 0 15px rgba(120, 0, 210, 0.5); /* Glow effect */
+}
+
+.btn-primary:hover {
+    background-color: #6400a2; /* Darker shade of purple */
+    box-shadow: 0 0 20px rgba(120, 0, 210, 0.7); /* Stronger glow effect */
 }
 
 .btn-secondary {
@@ -119,13 +125,17 @@ header {
     color: white;
 }
 
+.btn-secondary:hover {
+    background-color: #444;
+}
+
 .btn-danger {
     background-color: #dc3545;
     color: white;
 }
 
-.btn:hover {
-    opacity: 0.9;
+.btn-danger:hover {
+    background-color: #c82333;
 }
 
 /* Links */
@@ -137,13 +147,15 @@ header {
 
 .links a {
     margin: 0 15px;
-    color: #007bff;
+    color: #7800d2; /* Updated to purple */
     text-decoration: none;
     font-size: 1.1rem;
+    transition: color 0.3s;
 }
 
 .links a:hover {
     text-decoration: underline;
+    color: #6400a2; /* Darker shade of purple */
 }
 
 /* Modal Styles */
@@ -165,65 +177,6 @@ header {
     padding: 30px;
     border-radius: 10px;
     max-width: 600px;
-    width: 100%;
-    color: #f0f0f0;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 1.8rem;
-    color: #f0f0f0;
-    cursor: pointer;
-}
-
-h2 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-}
-
-#delControls input {
-    margin-bottom: 15px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: #1f1f1f;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 500px;
     width: 100%;
     color: #f0f0f0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -268,7 +221,7 @@ h2 {
 }
 
 #delUrl:focus {
-    border-color: #007bff;
+    border-color: #7800d2; /* Updated to purple */
     outline: none;
 }
 
@@ -291,4 +244,3 @@ h2 {
 .modal.active {
     display: flex;
 }
-
