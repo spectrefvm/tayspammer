@@ -257,7 +257,7 @@ h2 {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 5px; /* Smaller width of the scrollbar */
+    width: 8px; /* Keep the width of the scrollbar the same */
     height: 5px; /* Smaller height of the horizontal scrollbar */
 }
 
