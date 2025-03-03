@@ -99,24 +99,29 @@ async function del() {
 
 
 
-    <script>
-        const correctPassword = '123'; // Replace with your desired password
-        const submitPasswordButton = document.getElementById('submitPassword');
-        const passwordInput = document.getElementById('password');
-        const passwordPrompt = document.getElementById('passwordPrompt');
-        const content = document.getElementById('content');
-        const errorMessage = document.getElementById('errorMessage');
+// Password protection logic
+const correctPassword = 'yourpassword'; // Replace with your actual password
 
-        submitPasswordButton.addEventListener('click', () => {
-            const enteredPassword = passwordInput.value;
-            if (enteredPassword === correctPassword) {
-                passwordPrompt.style.display = 'none';
-                content.style.display = 'block';
-            } else {
-                errorMessage.style.display = 'block';
-            }
-        });
-    </script>
+// Get elements
+const submitPasswordButton = document.getElementById('submitPassword');
+const passwordInput = document.getElementById('password');
+const passwordPrompt = document.getElementById('passwordPrompt');
+const content = document.getElementById('content');
+const errorMessage = document.getElementById('errorMessage');
+
+// Event listener for password submission
+submitPasswordButton.addEventListener('click', () => {
+    const enteredPassword = passwordInput.value;
+
+    // Check if the entered password is correct
+    if (enteredPassword === correctPassword) {
+        passwordPrompt.style.display = 'none'; // Hide password prompt
+        content.style.display = 'block'; // Show the main content
+    } else {
+        errorMessage.style.display = 'block'; // Show error message
+    }
+});
+
 
 
 
