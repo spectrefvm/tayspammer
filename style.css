@@ -14,6 +14,7 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    font-size: 16px;
 }
 
 h1 {
@@ -63,12 +64,12 @@ header {
 /* Controls Section */
 #controls {
     background: #1e1e1e;
-    border-radius: 8px;
-    padding: 20px;
+    border-radius: 10px;
+    padding: 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
+    max-width: 500px;
+    margin-bottom: 30px;
 }
 
 .inputs {
@@ -77,11 +78,11 @@ header {
 }
 
 .inputs input {
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
     border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
     width: 100%;
     background-color: #333;
     color: #f0f0f0;
@@ -100,9 +101,9 @@ header {
 }
 
 .btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
     cursor: pointer;
     border: none;
     transition: background-color 0.3s;
@@ -131,14 +132,14 @@ header {
 .links {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .links a {
-    margin: 0 10px;
+    margin: 0 15px;
     color: #007bff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .links a:hover {
@@ -149,21 +150,21 @@ header {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
     background-color: #1f1f1f;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
     width: 100%;
     color: #f0f0f0;
 }
@@ -172,16 +173,16 @@ header {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #f0f0f0;
     cursor: pointer;
 }
 
 h2 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
 #delControls input {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
