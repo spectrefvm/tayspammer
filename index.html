@@ -7,77 +7,66 @@
     <title>Discord Webhook Spammer</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="https://i.imgur.com/j29MW5u.jpeg" type="image/jpeg">
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
     <script src="js/script.js" defer></script>
     <script src="js/modals.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Particles.js Container -->
     <div id="particles-js"></div>
-
-    <!-- Password Prompt -->
-    <div id="passwordPrompt" style="display: block;">
-        <h2>Please enter the password</h2>
-        <input type="password" id="password" placeholder="Enter Password" />
-        <button id="submitPassword">Submit</button>
-        <p id="errorMessage" style="display: none; color: red;">Incorrect password. Try again!</p>
-    </div>
-
-    <!-- Main Content (hidden initially) -->
-    <div id="content" style="display: none;">
-        <header>
-            <div class="logo-container">
-                <img src="https://i.imgur.com/j29MW5u.jpeg" alt="Logo" id="logo" />
-            </div>
-            <h1>Webhook Spammer by Kiwu</h1>
-        </header>
-
-        <main>
-            <section id="controls">
-                <div class="inputs">
-                    <input id="url" placeholder="Webhook URL" required />
-                    <input id="username" placeholder="Username" />
-                    <input id="message" placeholder="Message" required />
-                    <input id="avatar" placeholder="Avatar URL" />
-                </div>
-                <div class="buttons">
-                    <button id="start" class="btn btn-primary">Start</button>
-                    <button id="stop" class="btn btn-secondary" disabled>Stop</button>
-                </div>
-            </section>
-
-            <section class="links">
-                <a id="delLink" href="#">Delete Webhook</a>
-                <a id="aboutLink" href="#">About</a>
-            </section>
-        </main>
-
-        <!-- Delete Webhook Modal -->
-        <div id="delModal" class="modal">
-            <div class="modal-content">
-                <span class="close" id="delClose">&times;</span>
-                <h2>Delete Webhook</h2>
-                <p class="modal-description">To delete a webhook, simply enter the Webhook URL and click "Delete".</p>
-                <div id="delControls">
-                    <input id="delUrl" placeholder="*Webhook URL:" required />
-                    <button id="delete" class="btn btn-danger">Delete</button>
-                </div>
-            </div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="https://i.imgur.com/j29MW5u.jpeg" alt="Logo" id="logo" />
         </div>
+        <h1>Webhook Spammer by Kiwu</h1>
+    </header>
 
-        <!-- About Modal -->
-        <div id="aboutModal" class="modal">
-            <div class="modal-content">
-                <span class="close" id="aboutClose">&times;</span>
-                <h2>About Discord Webhook Spammer</h2>
-                <p>This is a Discord Webhook spamming tool created by Kiwu that allows you to spam a Discord Webhook.</p>
-                <p>To use this tool, enter all required info (Webhook URL and message), then click "Start" to begin spamming. Click "Stop" to stop the process.</p>
+    <main>
+        <section id="controls">
+            <div class="inputs">
+                <input id="url" placeholder="Webhook URL" required />
+                <input id="username" placeholder="Username" />
+                <input id="message" placeholder="Message" required />
+                <input id="avatar" placeholder="Avatar URL" />
             </div>
+            <div class="buttons">
+                <button id="start" class="btn btn-primary">Start</button>
+                <button id="stop" class="btn btn-secondary" disabled>Stop</button>
+            </div>
+        </section>
+
+        <section class="links">
+            <a id="delLink">Delete Webhook</a>
+            <a id="aboutLink">About</a>
+        </section>
+    </main>
+
+<!-- Delete Webhook Modal -->
+<div id="delModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="delClose">&times;</span>
+        <h2>Delete Webhook</h2>
+        <p class="modal-description">To delete a webhook, simply enter the Webhook URL and click "Delete".</p>
+        <div id="delControls">
+            <input id="delUrl" placeholder="*Webhook URL:" required />
+            <button id="delete" class="btn btn-danger">Delete</button>
         </div>
     </div>
+</div>
 
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="aboutClose">&times;</span>
+            <h2>About Discord Webhook Spammer</h2>
+            <p>This is a Discord Webhook spamming tool created by Kiwu that allows you to spam a Discord Webhook.</p>
+            <p>To use this tool, enter all required info (Webhook URL and message), then click "Start" to begin spamming. Click "Stop" to stop the process.</p>
+        </div>
+    </div>
 </body>
 
 </html>
