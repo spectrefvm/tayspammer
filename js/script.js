@@ -88,3 +88,85 @@ async function del() {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// particles.js configuration
+particlesJS('particles-js', {
+    "particles": {
+        "number": {
+            "value": 80, // Number of particles
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#7800d2" // Particle color
+        },
+        "shape": {
+            "type": "circle", // Shape of particles
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            }
+        },
+        "opacity": {
+            "value": 0.5, // Transparency of particles
+            "random": false,
+            "anim": {
+                "enable": true,
+                "speed": 1,
+                "opacity_min": 0.1
+            }
+        },
+        "size": {
+            "value": 5, // Size of particles
+            "random": true,
+            "anim": {
+                "enable": true,
+                "speed": 2,
+                "size_min": 0.1
+            }
+        },
+        "move": {
+            "enable": true,
+            "speed": 3, // Speed of particle movement
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out"
+        }
+    },
+    "interactivity": {
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse" // Particle reaction when hovering
+            }
+        }
+    },
+    "retina_detect": true
+});
