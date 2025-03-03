@@ -160,18 +160,69 @@ h1 {
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
+    animation: fadeIn 0.3s ease-out; /* Smooth fade-in transition */
 }
 
 .modal-content {
-    background-color: #1f1f1f;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 600px;
+    background-color: #2a2a2a; /* Darker background for a more sleek look */
+    padding: 20px;
+    border-radius: 12px; /* Slightly rounded corners for a modern feel */
+    max-width: 500px;
     width: 100%;
     color: #f0f0f0;
-    box-shadow: 0 0 40px rgba(120, 0, 210, 1); /* Glowing modal content */
+    box-shadow: 0 0 15px rgba(120, 0, 210, 0.5); /* Subtle glow effect */
+    text-align: center; /* Centering content */
+    font-family: 'Arial', sans-serif;
 }
 
+h2 {
+    font-size: 1.8rem; /* Larger, clearer heading */
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #7800d2; /* Highlighted heading color */
+}
+
+.modal-description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #d1d1d1; /* Slightly lighter color for description */
+}
+
+#delControls input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #333;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#delControls input:focus {
+    border-color: #7800d2; /* Glow effect on focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(120, 0, 210, 0.7); /* Soft glow on focus */
+}
+
+#delete {
+    background-color: #dc3545; /* Red button for delete */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#delete:hover {
+    background-color: #c82333; /* Darker red when hovered */
+    transform: scale(1.05); /* Subtle scale effect */
+}
+
+/* Close button */
 .close {
     position: absolute;
     top: 10px;
@@ -179,21 +230,21 @@ h1 {
     font-size: 1.8rem;
     color: #f0f0f0;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .close:hover {
     color: #7800d2; /* Glow effect for close button */
-    text-shadow: 0 0 10px rgba(120, 0, 210, 0.8); /* Added glow effect on hover */
+    transform: rotate(90deg); /* Slight rotation when hovered */
 }
 
-h2 {
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-}
-
-#delControls input {
-    margin-bottom: 15px;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Particles Background */
