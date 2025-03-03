@@ -17,16 +17,6 @@ body {
     font-size: 16px;
 }
 
-#particles-js {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #121212; /* Background color for particles */
-    z-index: -1; /* Ensures particles are behind other content */
-}
-
 h1 {
     text-align: center;
     font-size: 2rem;
@@ -50,7 +40,7 @@ header {
     width: 120px;
     height: 120px;
     padding: 10px;
-    box-shadow: 0 0 20px rgba(120, 0, 210, 0.5); /* Glow Effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
@@ -100,7 +90,7 @@ header {
 }
 
 .inputs input:focus {
-    border-color: #7800d2; /* Updated to purple */
+    border-color: #7800d2;
     outline: none;
 }
 
@@ -116,18 +106,12 @@ header {
     border-radius: 8px;
     cursor: pointer;
     border: none;
-    transition: background-color 0.3s, box-shadow 0.3s; /* Added transition for glow effect */
+    transition: background-color 0.3s;
 }
 
 .btn-primary {
-    background-color: #7800d2; /* Updated to purple */
+    background-color: #7800d2;
     color: white;
-    box-shadow: 0 0 15px rgba(120, 0, 210, 0.5); /* Glow effect */
-}
-
-.btn-primary:hover {
-    background-color: #6400a2; /* Darker shade of purple */
-    box-shadow: 0 0 20px rgba(120, 0, 210, 0.7); /* Stronger glow effect */
 }
 
 .btn-secondary {
@@ -135,17 +119,13 @@ header {
     color: white;
 }
 
-.btn-secondary:hover {
-    background-color: #444;
-}
-
 .btn-danger {
     background-color: #dc3545;
     color: white;
 }
 
-.btn-danger:hover {
-    background-color: #c82333;
+.btn:hover {
+    opacity: 0.9;
 }
 
 /* Links */
@@ -157,15 +137,13 @@ header {
 
 .links a {
     margin: 0 15px;
-    color: #7800d2; /* Updated to purple */
+    color: #7800d2;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.3s;
 }
 
 .links a:hover {
     text-decoration: underline;
-    color: #6400a2; /* Darker shade of purple */
 }
 
 /* Modal Styles */
@@ -186,7 +164,7 @@ header {
     background-color: #1f1f1f;
     padding: 30px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
     color: #f0f0f0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -231,7 +209,7 @@ h2 {
 }
 
 #delUrl:focus {
-    border-color: #7800d2; /* Updated to purple */
+    border-color: #7800d2;
     outline: none;
 }
 
@@ -253,81 +231,4 @@ h2 {
 /* Modal background overlay */
 .modal.active {
     display: flex;
-}
-
-
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 8px; /* Width of the vertical scrollbar */
-}
-
-::-webkit-scrollbar-track {
-    background: #1f1f1f; /* Background color of the scrollbar track */
-}
-
-::-webkit-scrollbar-thumb {
-    background: #7800d2; /* Color of the scrollbar thumb */
-    border-radius: 4px; /* Rounded corners for the thumb */
-    height: 40px; /* Smaller height of the scrollbar thumb */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #9a00ff; /* Darker shade when hovered */
-}
-
-
-
-/* Password Prompt Styling */
-.password-prompt {
-    background-color: #222;
-    padding: 30px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.password-prompt h2 {
-    margin-bottom: 20px;
-}
-
-.password-prompt input {
-    padding: 12px;
-    font-size: 1rem;
-    border: 1px solid #333;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
-    background-color: #333;
-    color: #f0f0f0;
-}
-
-.password-prompt button {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    background-color: #7800d2;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.password-prompt button:hover {
-    background-color: #5e00a3;
-}
-
-/* Content (hidden initially) */
-#content {
-    display: none;
-}
-
-#errorMessage {
-    color: red;
-    margin-top: 10px;
-    font-size: 1rem;
 }
