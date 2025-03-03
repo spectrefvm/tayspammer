@@ -1,0 +1,134 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo-container:hover {
+    transform: scale(1.1);
+}
+
+.logo-container:hover #logo {
+    transform: rotate(15deg);
+}
+
+/* Main content */
+main {
+    width: 100%;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+#delControls {
+    display: flex;
+    flex-direction: column;
+}
+
+#delUrl {
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #333;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+#delUrl:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#delete {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#delete:hover {
+    background-color: #c82333;
+}
+
+/* Links */
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
