@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="https://i.imgur.com/j29MW5u.jpeg" type="image/jpeg">
 
+    <!-- Include particles.js CDN -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
+
     <script src="js/script.js" defer></script>
     <script src="js/modals.js" defer></script>
 </head>
 
 <body>
-
+    <!-- Particles Background -->
     <div id="particles-js"></div>
-    
+
     <header>
         <div class="logo-container">
             <img src="https://i.imgur.com/j29MW5u.jpeg" alt="Logo" id="logo" />
@@ -45,18 +46,18 @@
         </section>
     </main>
 
-<!-- Delete Webhook Modal -->
-<div id="delModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="delClose">&times;</span>
-        <h2>Delete Webhook</h2>
-        <p class="modal-description">To delete a webhook, simply enter the Webhook URL and click "Delete".</p>
-        <div id="delControls">
-            <input id="delUrl" placeholder="*Webhook URL:" required />
-            <button id="delete" class="btn btn-danger">Delete</button>
+    <!-- Delete Webhook Modal -->
+    <div id="delModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="delClose">&times;</span>
+            <h2>Delete Webhook</h2>
+            <p class="modal-description">To delete a webhook, simply enter the Webhook URL and click "Delete".</p>
+            <div id="delControls">
+                <input id="delUrl" placeholder="*Webhook URL:" required />
+                <button id="delete" class="btn btn-danger">Delete</button>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- About Modal -->
     <div id="aboutModal" class="modal">
