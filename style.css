@@ -160,7 +160,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-    display: flex; /* Ensures the modal content is centered */
+    animation: fadeIn 0.3s ease-out; /* Smooth fade-in transition */
 }
 
 .modal-content {
