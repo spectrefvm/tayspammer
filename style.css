@@ -161,7 +161,6 @@ h1 {
     justify-content: center;
     align-items: center;
     animation: fadeIn 0.3s ease-out; /* Smooth fade-in transition */
-    display: flex; /* Ensure Flexbox is used */
 }
 
 .modal-content {
