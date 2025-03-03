@@ -164,11 +164,7 @@ particlesJS('particles-js', {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "repulse" // Make particles move away from mouse when hovered
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push" // Optional: Push particles when clicking (if desired)
+                "mode": "repulse" // Particles move away when mouse hovers over them
             }
         }
     },
