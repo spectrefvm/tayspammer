@@ -99,7 +99,24 @@ async function del() {
 
 
 
+    <script>
+        const correctPassword = 'yourpassword'; // Replace with your desired password
+        const submitPasswordButton = document.getElementById('submitPassword');
+        const passwordInput = document.getElementById('password');
+        const passwordPrompt = document.getElementById('passwordPrompt');
+        const content = document.getElementById('content');
+        const errorMessage = document.getElementById('errorMessage');
 
+        submitPasswordButton.addEventListener('click', () => {
+            const enteredPassword = passwordInput.value;
+            if (enteredPassword === correctPassword) {
+                passwordPrompt.style.display = 'none';
+                content.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
 
 
 
