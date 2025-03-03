@@ -100,7 +100,7 @@ async function del() {
 
 
     <script>
-        const correctPassword = 'yourpassword'; // Replace with your desired password
+        const correctPassword = '123'; // Replace with your desired password
         const submitPasswordButton = document.getElementById('submitPassword');
         const passwordInput = document.getElementById('password');
         const passwordPrompt = document.getElementById('passwordPrompt');
