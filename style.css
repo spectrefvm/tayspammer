@@ -256,10 +256,10 @@ h2 {
 }
 
 
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px; /* Width of the vertical scrollbar */
-    height: 5px; /* Height of the horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -269,6 +269,7 @@ h2 {
 ::-webkit-scrollbar-thumb {
     background: #7800d2; /* Color of the scrollbar thumb */
     border-radius: 4px; /* Rounded corners for the thumb */
+    height: 40px; /* Smaller height of the scrollbar thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
