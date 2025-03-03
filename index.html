@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +11,22 @@
     <script src="js/script.js" defer></script>
     <script src="js/modals.js" defer></script>
 </head>
+
 <body>
 
+    <!-- Particles.js Container -->
+    <div id="particles-js"></div>
+
     <!-- Password Prompt -->
-    <div id="passwordPrompt" class="password-prompt">
-        <h2>Enter Password</h2>
+    <div id="passwordPrompt" style="display: block;">
+        <h2>Please enter the password</h2>
         <input type="password" id="password" placeholder="Enter Password" />
-        <button id="submitPassword" class="btn btn-primary">Submit</button>
-        <p id="errorMessage" style="color: red; display: none;">Incorrect Password. Try again.</p>
+        <button id="submitPassword">Submit</button>
+        <p id="errorMessage" style="display: none; color: red;">Incorrect password. Try again!</p>
     </div>
 
-    <!-- The rest of your page content (hidden initially) -->
+    <!-- Main Content (hidden initially) -->
     <div id="content" style="display: none;">
-        <div id="particles-js"></div>
         <header>
             <div class="logo-container">
                 <img src="https://i.imgur.com/j29MW5u.jpeg" alt="Logo" id="logo" />
@@ -45,11 +49,35 @@
             </section>
 
             <section class="links">
-                <a id="delLink">Delete Webhook</a>
-                <a id="aboutLink">About</a>
+                <a id="delLink" href="#">Delete Webhook</a>
+                <a id="aboutLink" href="#">About</a>
             </section>
         </main>
+
+        <!-- Delete Webhook Modal -->
+        <div id="delModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="delClose">&times;</span>
+                <h2>Delete Webhook</h2>
+                <p class="modal-description">To delete a webhook, simply enter the Webhook URL and click "Delete".</p>
+                <div id="delControls">
+                    <input id="delUrl" placeholder="*Webhook URL:" required />
+                    <button id="delete" class="btn btn-danger">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Modal -->
+        <div id="aboutModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="aboutClose">&times;</span>
+                <h2>About Discord Webhook Spammer</h2>
+                <p>This is a Discord Webhook spamming tool created by Kiwu that allows you to spam a Discord Webhook.</p>
+                <p>To use this tool, enter all required info (Webhook URL and message), then click "Start" to begin spamming. Click "Stop" to stop the process.</p>
+            </div>
+        </div>
     </div>
 
 </body>
+
 </html>
