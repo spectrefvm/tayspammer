@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="https://i.imgur.com/j29MW5u.jpeg" type="image/jpeg">
     <script src="js/script.js" defer></script>
+    <script src="js/modals.js" defer></script>
 </head>
 
 <body>
@@ -33,18 +34,22 @@
         </div>
 
         <div class="links">
-            <a href="#" id="delLink" onclick="toggleDeleteConfirmation()">Delete Webhook</a>
+            <a href="#del" id="delLink">Delete Webhook</a>
             <a href="#about" id="aboutLink">About</a>
         </div>
-
-        <!-- Delete Webhook Confirmation Form -->
-        <div id="deleteForm" class="delete-form">
-            <p>Are you sure you want to delete this webhook?</p>
-            <input id="delUrl" placeholder="Enter Webhook URL to confirm" required />
-            <button id="delete" class="btn btn-danger" onclick="deleteWebhook()">Delete</button>
-            <button class="btn btn-secondary" onclick="toggleDeleteConfirmation()">Cancel</button>
-        </div>
     </main>
+
+    <!-- Delete Webhook Modal -->
+    <div id="delModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="delClose">&times;</span>
+            <h2>Delete Webhook</h2>
+            <div id="delControls">
+                <input id="delUrl" placeholder="*Webhook URL:" required />
+                <button id="delete" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
 
     <!-- About Modal -->
     <div id="aboutModal" class="modal">
