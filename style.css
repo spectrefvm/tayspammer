@@ -255,27 +255,22 @@ h2 {
     display: flex;
 }
 
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px; /* Keep the width of the scrollbar the same */
-    height: 5px; /* Smaller height of the horizontal scrollbar */
+    width: 8px; /* Width of the vertical scrollbar */
+    height: 5px; /* Height of the horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {
     background: #1f1f1f; /* Background color of the scrollbar track */
-    border-radius: 10px; /* Round corners for the track */
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #7800d2; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Round corners for the thumb */
-    border: 2px solid #1f1f1f; /* Border around the thumb */
+    background: #7800d2; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #9a00ff; /* Slightly darker shade when hovered */
-}
-
-::-webkit-scrollbar-button {
-    background-color: transparent; /* No button background */
+    background: #9a00ff; /* Darker shade when hovered */
 }
