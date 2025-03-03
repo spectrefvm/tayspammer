@@ -1,159 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Webhook Spammer</title>
-  </head>
-  <body>
-    <h1>Webhook Spammer by Kiwu</h1>
-    <div id="controls">
-      <div class="inputs">
-        <input id="url" placeholder="*Webhook URL:">
-        <input id="username" placeholder="Webhook Username:">
-        <input id="message" placeholder="*Message:">
-        <input id="avatar" placeholder="Avatar URL:">
-      </div>
-      <div class="buttons">
-        <button id="start">Start</button>
-        <button id="stop" disabled>Stop</button>
-      </div>
-    </div>
-    <a href="#del" id="delLink">Delete Webhook</a>
-    <div id="delModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="delClose">&times;</span>
-        <h2>Delete Webhook</h2>
-        <div id="delControls">
-          <input id="delUrl" placeholder="*Webhook URL:">
-          <button id="delete">Delete</button>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="js/script.js" defer></script>
+    <script src="js/modals.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="https://i.imgur.com/j29MW5u.jpeg" alt="Logo" id="logo" />
+        <h1>Webhook Spammer by Kiwu</h1>
+    </header>
+    
+    <main>
+        <div id="controls">
+            <div class="inputs">
+                <input id="url" placeholder="*Webhook URL:" required />
+                <input id="username" placeholder="Webhook Username:" />
+                <input id="message" placeholder="*Message:" required />
+                <input id="avatar" placeholder="Avatar URL:" />
+            </div>
+            <div class="buttons">
+                <button id="start" class="btn btn-primary">Start</button>
+                <button id="stop" class="btn btn-secondary" disabled>Stop</button>
+            </div>
         </div>
-      </div>
+
+        <div class="links">
+            <a href="#del" id="delLink">Delete Webhook</a>
+            <a href="#about" id="aboutLink">About</a>
+        </div>
+    </main>
+
+    <!-- Delete Webhook Modal -->
+    <div id="delModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="delClose">&times;</span>
+            <h2>Delete Webhook</h2>
+            <div id="delControls">
+                <input id="delUrl" placeholder="*Webhook URL:" required />
+                <button id="delete" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
     </div>
-    <a href="#about" id="aboutLink">About</a>
+
+    <!-- About Modal -->
     <div id="aboutModal" class="modal">
-      <div class="modal-content">
-        <span class="close" id="aboutClose">&times;</span>
-        <h2>About Discord Webhook Spammer</h2>
-        <p>
-          This is a discord webhook spamming tool created by Josakko that allows you to
-          spam an discord webhook. Visit my
-          github <a href="https://github.com/Josakko">here</a>.
-        </p>
-        <p>
-          To use this tool, simply enter all required info in input boxes (Webhook URL and message other is optional) 
-          then start spamming the webhook by clicking "Start" button then "Stop" button to stop spamming.
-          If you need any help or find any bugs, please
-          contact me on my
-          <a href="https://discord.gg/xgET5epJE6">discord server</a>.
-        </p>
-      </div>
+        <div class="modal-content">
+            <span class="close" id="aboutClose">&times;</span>
+            <h2>About Discord Webhook Spammer</h2>
+            <p>
+                This is a Discord webhook spamming tool created by Josakko that allows you to
+                spam a Discord webhook. Visit my GitHub <a href="https://github.com/Josakko" target="_blank">here</a>.
+            </p>
+            <p>
+                To use this tool, simply enter all required info in input boxes (Webhook URL and message; others are optional),
+                then start spamming the webhook by clicking the "Start" button, then click "Stop" to stop spamming.
+                If you need any help or find any bugs, please contact me on my <a href="https://discord.gg/xgET5epJE6" target="_blank">Discord server</a>.
+            </p>
+        </div>
     </div>
-    <script src="js/script.js"></script>
-    <script src="js/modals.js"></script>
+</body>
 
-
-
-
-
-
-<div id="particles-js"></div>
-
-<script>
-  particlesJS("particles-js", {
-    particles: {
-      number: {
-        value: 60,  /* Number of particles */
-        density: {
-          enable: true,
-          value_area: 800
-        }
-      },
-      color: {
-        value: "#1f60a5"  /* Blue particles */
-      },
-      shape: {
-        type: "circle",  /* Circular particles */
-        stroke: {
-          width: 0,
-          color: "#000000"
-        }
-      },
-      opacity: {
-        value: 0.5,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 1,
-          opacity_min: 0.1,
-          sync: false
-        }
-      },
-      size: {
-        value: 3,
-        random: true,
-        anim: {
-          enable: true,
-          speed: 4,
-          size_min: 0.1,
-          sync: false
-        }
-      },
-      line_linked: {
-        enable: true,
-        distance: 150,
-        color: "#1f60a5",  /* Blue lines connecting particles */
-        opacity: 0.4,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 2,
-        direction: "none",
-        random: false,
-        straight: false,
-        out_mode: "out",
-        bounce: false,
-        attract: {
-          enable: false
-        }
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: {
-          enable: true,
-          mode: "repulse"
-        },
-        onclick: {
-          enable: true,
-          mode: "push"
-        }
-      },
-      modes: {
-        repulse: {
-          distance: 100,
-          duration: 0.4
-        },
-        push: {
-          particles_nb: 4
-        }
-      }
-    },
-    retina_detect: true
-  });
-</script>
-
-
-
-
-
-
-    
-
-
-    
-  </body>
 </html>
