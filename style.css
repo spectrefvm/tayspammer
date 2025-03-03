@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
+    background-color: #121212;
+    color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +20,7 @@ h1 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 20px;
+    color: #f0f0f0;
 }
 
 /* Header */
@@ -33,12 +34,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #007bff;
+    background-color: #1f1f1f;
     border-radius: 50%;
     width: 120px;
     height: 120px;
     padding: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
@@ -61,7 +62,7 @@ header {
 
 /* Controls Section */
 #controls {
-    background: #ffffff;
+    background: #1e1e1e;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -78,10 +79,12 @@ header {
 .inputs input {
     margin-bottom: 15px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     border-radius: 5px;
     font-size: 1rem;
     width: 100%;
+    background-color: #333;
+    color: #f0f0f0;
     transition: border-color 0.3s;
 }
 
@@ -111,7 +114,7 @@ header {
 }
 
 .btn-secondary {
-    background-color: #ccc;
+    background-color: #555;
     color: white;
 }
 
@@ -157,11 +160,12 @@ header {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #1f1f1f;
     padding: 20px;
     border-radius: 8px;
     max-width: 500px;
     width: 100%;
+    color: #f0f0f0;
 }
 
 .close {
@@ -169,6 +173,7 @@ header {
     top: 10px;
     right: 10px;
     font-size: 1.5rem;
+    color: #f0f0f0;
     cursor: pointer;
 }
 
