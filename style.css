@@ -21,9 +21,10 @@ body {
 /* Header */
 h1 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     color: #f0f0f0;
+    text-shadow: 0 0 15px rgba(120, 0, 210, 0.8); /* Added glow effect to the title */
 }
 
 /* Logo Container */
@@ -36,9 +37,9 @@ h1 {
     width: 120px;
     height: 120px;
     padding: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 30px rgba(120, 0, 210, 0.8); /* Stronger glow effect */
     margin-bottom: 20px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 #logo {
@@ -51,7 +52,7 @@ h1 {
 
 .logo-container:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 30px rgba(120, 0, 210, 0.8); /* Glow effect */
+    box-shadow: 0 0 40px rgba(120, 0, 210, 1); /* Glow effect when hovered */
 }
 
 .logo-container:hover #logo {
@@ -63,7 +64,7 @@ h1 {
     background: #1e1e1e;
     border-radius: 10px;
     padding: 30px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(120, 0, 210, 0.6); /* Added glow to controls */
     width: 100%;
     max-width: 500px;
     margin-bottom: 30px;
@@ -85,7 +86,7 @@ h1 {
 .inputs input:focus {
     border-color: #7800d2;
     outline: none;
-    box-shadow: 0 0 5px rgba(120, 0, 210, 0.7); /* Glow effect on focus */
+    box-shadow: 0 0 10px rgba(120, 0, 210, 0.9); /* Added stronger glow effect on input focus */
 }
 
 /* Buttons */
@@ -106,21 +107,24 @@ h1 {
 .btn-primary {
     background-color: #7800d2;
     color: white;
+    box-shadow: 0 0 10px rgba(120, 0, 210, 0.6); /* Initial glow effect for primary button */
 }
 
 .btn-secondary {
     background-color: #555;
     color: white;
+    box-shadow: 0 0 10px rgba(120, 0, 210, 0.3); /* Subtle glow effect for secondary button */
 }
 
 .btn-danger {
     background-color: #dc3545;
     color: white;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.6); /* Red glow effect for danger button */
 }
 
 .btn:hover {
     opacity: 0.9;
-    box-shadow: 0 0 10px rgba(120, 0, 210, 0.6); /* Glow effect on hover */
+    box-shadow: 0 0 20px rgba(120, 0, 210, 0.8); /* Glow effect on hover */
 }
 
 /* Links */
@@ -135,12 +139,13 @@ h1 {
     color: #7800d2;
     text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.3s;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 .links a:hover {
     text-decoration: underline;
     color: #9a00ff; /* Lighter purple on hover */
+    text-shadow: 0 0 15px rgba(120, 0, 210, 0.8); /* Added glow effect on hover */
 }
 
 /* Modal Styles */
@@ -164,7 +169,7 @@ h1 {
     max-width: 600px;
     width: 100%;
     color: #f0f0f0;
-    box-shadow: 0 0 30px rgba(120, 0, 210, 0.8); /* Modal glow */
+    box-shadow: 0 0 40px rgba(120, 0, 210, 1); /* Glowing modal content */
 }
 
 .close {
@@ -179,6 +184,7 @@ h1 {
 
 .close:hover {
     color: #7800d2; /* Glow effect for close button */
+    text-shadow: 0 0 10px rgba(120, 0, 210, 0.8); /* Added glow effect on hover */
 }
 
 h2 {
@@ -219,5 +225,5 @@ h2 {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #9a00ff; /* Darker shade when hovered */
-    box-shadow: 0 0 10px rgba(120, 0, 210, 0.7); /* Glow effect when hovered */
+    box-shadow: 0 0 20px rgba(120, 0, 210, 1); /* Stronger glow effect when hovered */
 }
